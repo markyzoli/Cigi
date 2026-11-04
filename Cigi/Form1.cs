@@ -524,10 +524,12 @@ namespace Cigi
                 int napok = (DateTime.Today - utolsoVasarlas.Date).Days;
                 if (napok < 0) napok = 0;
                 labelVasarlasOta.Text = $"{napok} nap";
+                labeUtolsoVasarlasOtaNap.Text = $"Utolsó vásárlás óta: {napok} nap";
             }
             else
             {
                 labelVasarlasOta.Text = "-";
+                labeUtolsoVasarlasOtaNap.Text = "Nincs vásárlási adat";
             }
         }
     }
