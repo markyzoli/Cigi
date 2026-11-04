@@ -30,7 +30,18 @@
         {
             tabControlStatisztika = new TabControl();
             tabPageVasarlas = new TabPage();
+            label22 = new Label();
+            dataGridViewKeszlet = new DataGridView();
             groupBoxVasarlas = new GroupBox();
+            labeUtolsoVasarlasOtaNap = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            textBoxSzipkaDb = new TextBox();
+            textBoxHuvelyDb = new TextBox();
+            textBoxPipaGr = new TextBox();
+            textBoxCigiGr = new TextBox();
+            label12 = new Label();
             buttonSave = new Button();
             textBoxSzipkaFt = new TextBox();
             textBoxHuvelyFt = new TextBox();
@@ -57,25 +68,25 @@
             groupBox2 = new GroupBox();
             dataGridViewDohanyUj = new DataGridView();
             groupBoxSzures = new GroupBox();
+            label21 = new Label();
+            labelVasarlasOta = new Label();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
             labelSzipkaPerDb = new Label();
             labelHaviFt = new Label();
             labelNapiFt = new Label();
             labelNapiDb = new Label();
-            button1 = new Button();
+            buttonFrissit = new Button();
             datePickerGoal = new DateTimePicker();
             datePickerStart = new DateTimePicker();
             label2 = new Label();
             label1 = new Label();
-            label12 = new Label();
-            textBoxCigiGr = new TextBox();
-            textBoxPipaGr = new TextBox();
-            textBoxHuvelyDb = new TextBox();
-            textBoxSzipkaDb = new TextBox();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
             tabControlStatisztika.SuspendLayout();
             tabPageVasarlas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewKeszlet).BeginInit();
             groupBoxVasarlas.SuspendLayout();
             groupBoxMaradek.SuspendLayout();
             tabPageStatisztika.SuspendLayout();
@@ -92,23 +103,44 @@
             tabControlStatisztika.Location = new Point(0, 0);
             tabControlStatisztika.Name = "tabControlStatisztika";
             tabControlStatisztika.SelectedIndex = 0;
-            tabControlStatisztika.Size = new Size(800, 450);
+            tabControlStatisztika.Size = new Size(800, 523);
             tabControlStatisztika.TabIndex = 1;
             // 
             // tabPageVasarlas
             // 
+            tabPageVasarlas.Controls.Add(label22);
+            tabPageVasarlas.Controls.Add(dataGridViewKeszlet);
             tabPageVasarlas.Controls.Add(groupBoxVasarlas);
             tabPageVasarlas.Controls.Add(groupBoxMaradek);
             tabPageVasarlas.Location = new Point(4, 24);
             tabPageVasarlas.Name = "tabPageVasarlas";
             tabPageVasarlas.Padding = new Padding(3);
-            tabPageVasarlas.Size = new Size(792, 422);
+            tabPageVasarlas.Size = new Size(792, 495);
             tabPageVasarlas.TabIndex = 0;
             tabPageVasarlas.Text = "Vásárlás";
             tabPageVasarlas.UseVisualStyleBackColor = true;
             // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(15, 287);
+            label22.Name = "label22";
+            label22.Size = new Size(43, 15);
+            label22.TabIndex = 3;
+            label22.Text = "Készlet";
+            // 
+            // dataGridViewKeszlet
+            // 
+            dataGridViewKeszlet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewKeszlet.Dock = DockStyle.Bottom;
+            dataGridViewKeszlet.Location = new Point(3, 305);
+            dataGridViewKeszlet.Name = "dataGridViewKeszlet";
+            dataGridViewKeszlet.Size = new Size(786, 187);
+            dataGridViewKeszlet.TabIndex = 2;
+            // 
             // groupBoxVasarlas
             // 
+            groupBoxVasarlas.Controls.Add(labeUtolsoVasarlasOtaNap);
             groupBoxVasarlas.Controls.Add(label15);
             groupBoxVasarlas.Controls.Add(label14);
             groupBoxVasarlas.Controls.Add(label13);
@@ -133,6 +165,79 @@
             groupBoxVasarlas.TabStop = false;
             groupBoxVasarlas.Text = "Vásárlás (Ft)";
             // 
+            // labeUtolsoVasarlasOtaNap
+            // 
+            labeUtolsoVasarlasOtaNap.AutoSize = true;
+            labeUtolsoVasarlasOtaNap.Location = new Point(322, 85);
+            labeUtolsoVasarlasOtaNap.Name = "labeUtolsoVasarlasOtaNap";
+            labeUtolsoVasarlasOtaNap.Size = new Size(145, 15);
+            labeUtolsoVasarlasOtaNap.TabIndex = 18;
+            labeUtolsoVasarlasOtaNap.Text = "labeUtolsoVasarlasOtaNap";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(208, 110);
+            label15.Name = "label15";
+            label15.Size = new Size(74, 15);
+            label15.TabIndex = 17;
+            label15.Text = "Kiszerelés db";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(208, 81);
+            label14.Name = "label14";
+            label14.Size = new Size(74, 15);
+            label14.TabIndex = 16;
+            label14.Text = "Kiszerelés db";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(208, 53);
+            label13.Name = "label13";
+            label13.Size = new Size(71, 15);
+            label13.TabIndex = 15;
+            label13.Text = "Kiszerelés gr";
+            // 
+            // textBoxSzipkaDb
+            // 
+            textBoxSzipkaDb.Location = new Point(146, 106);
+            textBoxSzipkaDb.Name = "textBoxSzipkaDb";
+            textBoxSzipkaDb.Size = new Size(56, 23);
+            textBoxSzipkaDb.TabIndex = 14;
+            // 
+            // textBoxHuvelyDb
+            // 
+            textBoxHuvelyDb.Location = new Point(146, 77);
+            textBoxHuvelyDb.Name = "textBoxHuvelyDb";
+            textBoxHuvelyDb.Size = new Size(56, 23);
+            textBoxHuvelyDb.TabIndex = 13;
+            // 
+            // textBoxPipaGr
+            // 
+            textBoxPipaGr.Location = new Point(146, 49);
+            textBoxPipaGr.Name = "textBoxPipaGr";
+            textBoxPipaGr.Size = new Size(56, 23);
+            textBoxPipaGr.TabIndex = 12;
+            // 
+            // textBoxCigiGr
+            // 
+            textBoxCigiGr.Location = new Point(146, 22);
+            textBoxCigiGr.Name = "textBoxCigiGr";
+            textBoxCigiGr.Size = new Size(56, 23);
+            textBoxCigiGr.TabIndex = 11;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(208, 26);
+            label12.Name = "label12";
+            label12.Size = new Size(71, 15);
+            label12.TabIndex = 10;
+            label12.Text = "Kiszerelés gr";
+            // 
             // buttonSave
             // 
             buttonSave.Location = new Point(319, 53);
@@ -141,6 +246,7 @@
             buttonSave.TabIndex = 9;
             buttonSave.Text = "Mentés";
             buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += ButtonSave_Click;
             // 
             // textBoxSzipkaFt
             // 
@@ -148,6 +254,7 @@
             textBoxSzipkaFt.Name = "textBoxSzipkaFt";
             textBoxSzipkaFt.Size = new Size(56, 23);
             textBoxSzipkaFt.TabIndex = 8;
+            textBoxSzipkaFt.TextChanged += PriceTextBox_TextChanged;
             textBoxSzipkaFt.KeyPress += TextBoxDohanyMaradek_KeyPress;
             // 
             // textBoxHuvelyFt
@@ -156,6 +263,7 @@
             textBoxHuvelyFt.Name = "textBoxHuvelyFt";
             textBoxHuvelyFt.Size = new Size(56, 23);
             textBoxHuvelyFt.TabIndex = 7;
+            textBoxHuvelyFt.TextChanged += PriceTextBox_TextChanged;
             textBoxHuvelyFt.KeyPress += TextBoxDohanyMaradek_KeyPress;
             // 
             // textBoxPipaFt
@@ -164,6 +272,7 @@
             textBoxPipaFt.Name = "textBoxPipaFt";
             textBoxPipaFt.Size = new Size(56, 23);
             textBoxPipaFt.TabIndex = 6;
+            textBoxPipaFt.TextChanged += PriceTextBox_TextChanged;
             textBoxPipaFt.KeyPress += TextBoxDohanyMaradek_KeyPress;
             // 
             // textBoxCigiFt
@@ -172,6 +281,7 @@
             textBoxCigiFt.Name = "textBoxCigiFt";
             textBoxCigiFt.Size = new Size(56, 23);
             textBoxCigiFt.TabIndex = 5;
+            textBoxCigiFt.TextChanged += PriceTextBox_TextChanged;
             textBoxCigiFt.KeyPress += TextBoxDohanyMaradek_KeyPress;
             // 
             // label11
@@ -248,6 +358,7 @@
             buttonKiszamol.TabIndex = 3;
             buttonKiszamol.Text = "Kiszámolja a hüvelyeket";
             buttonKiszamol.UseVisualStyleBackColor = true;
+            buttonKiszamol.Click += ButtonKiszamol_Click;
             // 
             // textBoxPluszMinusz
             // 
@@ -255,7 +366,7 @@
             textBoxPluszMinusz.Name = "textBoxPluszMinusz";
             textBoxPluszMinusz.Size = new Size(36, 23);
             textBoxPluszMinusz.TabIndex = 2;
-            textBoxPluszMinusz.KeyPress += TextBoxDohanyMaradek_KeyPress;
+            textBoxPluszMinusz.KeyPress += TextBoxPluszMinusz_KeyPress;
             // 
             // textBoxMmeter
             // 
@@ -341,7 +452,7 @@
             tabPageStatisztika.Location = new Point(4, 24);
             tabPageStatisztika.Name = "tabPageStatisztika";
             tabPageStatisztika.Padding = new Padding(3);
-            tabPageStatisztika.Size = new Size(792, 422);
+            tabPageStatisztika.Size = new Size(792, 495);
             tabPageStatisztika.TabIndex = 1;
             tabPageStatisztika.Text = "Statisztika";
             tabPageStatisztika.UseVisualStyleBackColor = true;
@@ -350,9 +461,9 @@
             // 
             groupBox2.Controls.Add(dataGridViewDohanyUj);
             groupBox2.Dock = DockStyle.Fill;
-            groupBox2.Location = new Point(3, 103);
+            groupBox2.Location = new Point(3, 126);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(786, 316);
+            groupBox2.Size = new Size(786, 366);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Adatok";
@@ -363,16 +474,23 @@
             dataGridViewDohanyUj.Dock = DockStyle.Fill;
             dataGridViewDohanyUj.Location = new Point(3, 19);
             dataGridViewDohanyUj.Name = "dataGridViewDohanyUj";
-            dataGridViewDohanyUj.Size = new Size(780, 294);
+            dataGridViewDohanyUj.Size = new Size(780, 344);
             dataGridViewDohanyUj.TabIndex = 0;
             // 
             // groupBoxSzures
             // 
+            groupBoxSzures.Controls.Add(label21);
+            groupBoxSzures.Controls.Add(labelVasarlasOta);
+            groupBoxSzures.Controls.Add(label20);
+            groupBoxSzures.Controls.Add(label19);
+            groupBoxSzures.Controls.Add(label18);
+            groupBoxSzures.Controls.Add(label17);
+            groupBoxSzures.Controls.Add(label16);
             groupBoxSzures.Controls.Add(labelSzipkaPerDb);
             groupBoxSzures.Controls.Add(labelHaviFt);
             groupBoxSzures.Controls.Add(labelNapiFt);
             groupBoxSzures.Controls.Add(labelNapiDb);
-            groupBoxSzures.Controls.Add(button1);
+            groupBoxSzures.Controls.Add(buttonFrissit);
             groupBoxSzures.Controls.Add(datePickerGoal);
             groupBoxSzures.Controls.Add(datePickerStart);
             groupBoxSzures.Controls.Add(label2);
@@ -380,15 +498,78 @@
             groupBoxSzures.Dock = DockStyle.Top;
             groupBoxSzures.Location = new Point(3, 3);
             groupBoxSzures.Name = "groupBoxSzures";
-            groupBoxSzures.Size = new Size(786, 100);
+            groupBoxSzures.Size = new Size(786, 123);
             groupBoxSzures.TabIndex = 0;
             groupBoxSzures.TabStop = false;
             groupBoxSzures.Text = "Szűrés";
             // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(701, 42);
+            label21.Name = "label21";
+            label21.Size = new Size(36, 15);
+            label21.TabIndex = 17;
+            label21.Text = "telt el";
+            // 
+            // labelVasarlasOta
+            // 
+            labelVasarlasOta.AutoSize = true;
+            labelVasarlasOta.Location = new Point(663, 42);
+            labelVasarlasOta.Name = "labelVasarlasOta";
+            labelVasarlasOta.Size = new Size(36, 15);
+            labelVasarlasOta.TabIndex = 16;
+            labelVasarlasOta.Text = "0 nap";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(557, 42);
+            label20.Name = "label20";
+            label20.Size = new Size(105, 15);
+            label20.TabIndex = 15;
+            label20.Text = "Utolsó vásárlás óta";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(557, 23);
+            label19.Name = "label19";
+            label19.Size = new Size(67, 15);
+            label19.TabIndex = 14;
+            label19.Text = "Szipka/cigi:";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(420, 61);
+            label18.Name = "label18";
+            label18.Size = new Size(47, 15);
+            label18.TabIndex = 13;
+            label18.Text = "Havi Ft:";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(419, 42);
+            label17.Name = "label17";
+            label17.Size = new Size(48, 15);
+            label17.TabIndex = 12;
+            label17.Text = "Napi Ft:";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(410, 23);
+            label16.Name = "label16";
+            label16.Size = new Size(57, 15);
+            label16.TabIndex = 11;
+            label16.Text = "Napi cigi:";
+            // 
             // labelSzipkaPerDb
             // 
             labelSzipkaPerDb.AutoSize = true;
-            labelSzipkaPerDb.Location = new Point(627, 22);
+            labelSzipkaPerDb.Location = new Point(627, 23);
             labelSzipkaPerDb.Name = "labelSzipkaPerDb";
             labelSzipkaPerDb.Size = new Size(97, 15);
             labelSzipkaPerDb.TabIndex = 10;
@@ -397,7 +578,7 @@
             // labelHaviFt
             // 
             labelHaviFt.AutoSize = true;
-            labelHaviFt.Location = new Point(420, 62);
+            labelHaviFt.Location = new Point(473, 61);
             labelHaviFt.Name = "labelHaviFt";
             labelHaviFt.Size = new Size(66, 15);
             labelHaviFt.TabIndex = 9;
@@ -406,7 +587,7 @@
             // labelNapiFt
             // 
             labelNapiFt.AutoSize = true;
-            labelNapiFt.Location = new Point(420, 41);
+            labelNapiFt.Location = new Point(473, 42);
             labelNapiFt.Name = "labelNapiFt";
             labelNapiFt.Size = new Size(67, 15);
             labelNapiFt.TabIndex = 8;
@@ -415,20 +596,21 @@
             // labelNapiDb
             // 
             labelNapiDb.AutoSize = true;
-            labelNapiDb.Location = new Point(420, 22);
+            labelNapiDb.Location = new Point(473, 23);
             labelNapiDb.Name = "labelNapiDb";
             labelNapiDb.Size = new Size(72, 15);
             labelNapiDb.TabIndex = 7;
             labelNapiDb.Text = "labelNapiDb";
             // 
-            // button1
+            // buttonFrissit
             // 
-            button1.Location = new Point(339, 53);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Frissítés";
-            button1.UseVisualStyleBackColor = true;
+            buttonFrissit.Location = new Point(321, 54);
+            buttonFrissit.Name = "buttonFrissit";
+            buttonFrissit.Size = new Size(75, 23);
+            buttonFrissit.TabIndex = 6;
+            buttonFrissit.Text = "Frissítés";
+            buttonFrissit.UseVisualStyleBackColor = true;
+            buttonFrissit.Click += ButtonFrissit_Click;
             // 
             // datePickerGoal
             // 
@@ -462,80 +644,19 @@
             label1.TabIndex = 2;
             label1.Text = "Kezdő dátum";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(208, 26);
-            label12.Name = "label12";
-            label12.Size = new Size(71, 15);
-            label12.TabIndex = 10;
-            label12.Text = "Kiszerelés gr";
-            // 
-            // textBoxCigiGr
-            // 
-            textBoxCigiGr.Location = new Point(146, 22);
-            textBoxCigiGr.Name = "textBoxCigiGr";
-            textBoxCigiGr.Size = new Size(56, 23);
-            textBoxCigiGr.TabIndex = 11;
-            // 
-            // textBoxPipaGr
-            // 
-            textBoxPipaGr.Location = new Point(146, 49);
-            textBoxPipaGr.Name = "textBoxPipaGr";
-            textBoxPipaGr.Size = new Size(56, 23);
-            textBoxPipaGr.TabIndex = 12;
-            // 
-            // textBoxHuvelyDb
-            // 
-            textBoxHuvelyDb.Location = new Point(146, 77);
-            textBoxHuvelyDb.Name = "textBoxHuvelyDb";
-            textBoxHuvelyDb.Size = new Size(56, 23);
-            textBoxHuvelyDb.TabIndex = 13;
-            // 
-            // textBoxSzipkaDb
-            // 
-            textBoxSzipkaDb.Location = new Point(146, 106);
-            textBoxSzipkaDb.Name = "textBoxSzipkaDb";
-            textBoxSzipkaDb.Size = new Size(56, 23);
-            textBoxSzipkaDb.TabIndex = 14;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(208, 53);
-            label13.Name = "label13";
-            label13.Size = new Size(71, 15);
-            label13.TabIndex = 15;
-            label13.Text = "Kiszerelés gr";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(208, 81);
-            label14.Name = "label14";
-            label14.Size = new Size(74, 15);
-            label14.TabIndex = 16;
-            label14.Text = "Kiszerelés db";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(208, 110);
-            label15.Name = "label15";
-            label15.Size = new Size(74, 15);
-            label15.TabIndex = 17;
-            label15.Text = "Kiszerelés db";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 523);
             Controls.Add(tabControlStatisztika);
             Name = "Form1";
             Text = "Dohány vásárlás és statisztika";
+            Load += Form1_Load;
             tabControlStatisztika.ResumeLayout(false);
             tabPageVasarlas.ResumeLayout(false);
+            tabPageVasarlas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewKeszlet).EndInit();
             groupBoxVasarlas.ResumeLayout(false);
             groupBoxVasarlas.PerformLayout();
             groupBoxMaradek.ResumeLayout(false);
@@ -562,7 +683,7 @@
         private DateTimePicker datePickerStart;
         private GroupBox groupBox2;
         private DataGridView dataGridViewDohanyUj;
-        private Button button1;
+        private Button buttonFrissit;
         private TextBox textBoxSzipkaMaradek;
         private TextBox textBoxHuvelyMaradek;
         private TextBox textBoxDohanyMaradek;
@@ -596,5 +717,15 @@
         private Label label14;
         private Label label13;
         private TextBox textBoxSzipkaDb;
+        private Label label17;
+        private Label label16;
+        private Label label19;
+        private Label label18;
+        private Label label21;
+        private Label labelVasarlasOta;
+        private Label label20;
+        private DataGridView dataGridViewKeszlet;
+        private Label label22;
+        private Label labeUtolsoVasarlasOtaNap;
     }
 }

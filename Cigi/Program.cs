@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace Cigi
 {
     internal static class Program
@@ -8,6 +11,7 @@ namespace Cigi
         [STAThread]
         static void Main()
         {
+            SQLitePCL.Batteries.Init();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
